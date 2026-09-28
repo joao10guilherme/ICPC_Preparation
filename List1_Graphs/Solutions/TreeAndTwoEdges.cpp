@@ -22,9 +22,9 @@ const ll LINF = 1e18;
 const int MAXN = 50005;
 const int LOG = 17;
 
-// ----------------
+// -------------------
 // DSU Structures
-//-----------------
+//--------------------
 // parent_node keeps track of the root of each subset for cycle detection
 int parent_node[MAXN];
 
@@ -85,9 +85,9 @@ int get_lca(int u, int v){
     return up[u][0];
 }
 
-// --------------------
+// -------------------------
 // intersection logic
-// --------------------
+// -------------------------
 // checks if two purely ascending paths (u1 up to w1, and u2 up to w2) share any vertices
 bool asc_intersect(int u1, int w1, int u2, int w2){
     int L = get_lca(u1, u2);
