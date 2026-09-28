@@ -26,13 +26,13 @@ void solve(){
     cin >> N >> X >> M;
 
     // populate rooms vector
-    vector<int> rooms(N);
+    vector<int> rooms(N + 1);
     for(int i = 1; i <= N; i++){
         rooms[i] = i;
     }
 
     // populate boxes vector -> based on M queries
-    vector<bool> boxes(N, false);
+    vector<bool> boxes(N + 1, false);
     for(int i = 1; i <= M; i++){
         int box;
         cin >> box;
@@ -41,19 +41,19 @@ void solve(){
 
     // clw traversal
     int clw_count = 0;
-    for(int room : rooms){
-        if(boxes[room])
+    for(int i = 1; i <= X; i++){
+        if(boxes[i] == true)
             clw_count++;
     }
 
     // ccw traversal
     int ccw_count = 0;
-    for(int i = rooms.size(); i <= 1; i--){
-        if(boxes[i])
+    for(int i = N; i >= X; i--){
+        if(boxes[i] == true)
             ccw_count++;
     }
 
-    cout << min(clw_count, ccw_count) << endl;
+    cout << "Output: " << min(clw_count, ccw_count) << endl;
 
 }
 
@@ -61,9 +61,7 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t = 1;
-    // cin >> t;
-    while (t--) solve();
+    solve();
 
     return 0;
 }
