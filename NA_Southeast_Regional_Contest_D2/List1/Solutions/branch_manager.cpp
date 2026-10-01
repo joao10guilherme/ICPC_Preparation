@@ -30,14 +30,15 @@ void solve(){
     int N, M;
     cin >> N >> M;
 
-    vector<vi> adj(N + 1);
-    vi par(N + 1, 0);
+    vector<vi> adj(N + 1); // connections between cities
+    vi par(N + 1, 0);      // parents of current nodes
     rep(i,0,N-1){
         int a, b;
         cin >> a >> b;
         adj[a].pb(b);
         par[b] = a;
     }
+    
     // people always pick the smallest label first
     rep(u,1,N+1) sort(all(adj[u]));
 
