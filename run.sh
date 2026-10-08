@@ -4,7 +4,7 @@
 FILE=${1:?"Usage: ./run.sh <file.cpp> [input_file | tests_dir]"}
 BIN="${FILE%.cpp}"
 
-g++-15 -std=c++17 -O2 -Wall -o "$BIN" "$FILE" || exit 1
+g++-16 -std=c++17 -O2 -Wall -o "$BIN" "$FILE" || exit 1
 
 if [ -d "$2" ]; then
     for f in "$2"/*.txt; do
