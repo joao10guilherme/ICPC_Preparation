@@ -9,24 +9,19 @@ int main(){
     cin >> r >> c;
 
     vector<string> grid(r);
-
     for(int i = 0; i < r; i++){
-        string str;
-        cin >> str;
-        grid.push_back(str);
+        string row;
+        cin >> row;
+        grid[i] = row;
     }
 
-    string answer = "";
-
-    for(int i = 0; i < r; i++){
-        for(int j = 0; j < c; j++){
+    for(int j = 0; j < c; j++){
+        for(int i = 0; i < r; i++){
             if(grid[i][j] != '.'){
-                answer += grid[i][j];
+                cout << grid[i][j];
             }
         }
-    }
-
-    cout << answer << endl;
+    }cout << endl;
 
     return 0;
 }
