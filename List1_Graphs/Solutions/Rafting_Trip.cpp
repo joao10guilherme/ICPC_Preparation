@@ -145,12 +145,17 @@ void solve() {
 
         for(int d = 0; d < 4; d++){
 
-            adjacent row
+            // adjacent row
             int ar = row + dr[d];
-            adjacent col
+            // adjacent col
             int ac = col + dc[d];
 
             -> check (nr, nc)
+
+            // if need to update ar, ac -> if multiples checks in sequence
+            // usually for a full row in a grid. **INCLUDE INSIDE ANOTHER WHILE LOOP FOR WHOLE ROW CHECK**
+            ar += dr[d];
+            ac += dc[d];
         }
     
     */

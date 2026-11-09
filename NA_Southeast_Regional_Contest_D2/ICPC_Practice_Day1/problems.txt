@@ -1,0 +1,21 @@
+Snakey String -> already done before -> done
+
+Blind Bottles - 6/10
+    - vector containing all the tried combinations and their number of correct pos
+    - iterations generating random position vectors
+        - if it was tried before, skip - generate another pos vector
+        - check if k == n. if k < n, add the vector in the tried_comb and redo the iteration
+
+One Way Only - 7/10
+    - given a preferred path on a grid, return the mininum number of avoid spots that prevent the user from not following the preferred path
+    - User can only travel up an down
+
+Photo Encoding - 9/10
+
+Shinjuku Station - 4/10
+    - just read times of arrivals and depatures of trains.
+    - see which one is the shortest time between and return the time in seconds
+    - if it's different than s, return -1
+
+Passport Control - 3/10
+    - nothing in mind yet
